@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <center><h1>Success!</h1></center>
+        <p>Welcome to Calorie Buddy! You've successfully registered.</p>
+
+        <!-- Write some stuff here --> 
+        <p>Here you can see the data that you've provided us.</p>
+        <p>Your name is <%=name%> <%=lastName%>. Your username is <strong><%=username%></strong> and your password is <strong><%=password%></strong>. Make sure you store it somewhere safely since even we can't retrieve it for you if you lose it. The way we store your password is in a hased format, like so: <%=hashedPassword%>. We've also sent a confirmation mail to your email addres: <%=email%></p>
+
+    </div>
+</main>
+
+<footer>
+    <%- include('partials/footer'); %>
+</footer>
+
+</body>
+</html>

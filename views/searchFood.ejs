@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); %>
+  <!-- Icon library for the search icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="container">
+
+<header>
+  <%- include('partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <center> <h1>Search</h1> </center> <br>
+        <p>Use the below box to search for a particular food item. You can enter the exact food item name or a part of it.</p>
+	<p><small>E.g. searching for "bread" will return "Bread" as well as any related food items such as "Banana bread", "Wholemeal bread", "Cornbread", etc.</small></p>
+
+	<form action="/searchFood-result" method="GET">
+	<div class="form-group">
+  		<div class="input-group">
+    			<input type="search" id="search" class="form-control" name="search" placeholder="Search for food ...">
+			<div class="input-group-append">
+				<button type="submit" class="btn btn-primary">  <i class="fa fa-search"></i>  </button>
+                	</div>
+  		</div>
+	</div>
+	</form>	
+
+    </div>
+</main>
+
+<footer>
+    <%- include('partials/footer'); %>
+</footer>
+
+</body>
+</html>

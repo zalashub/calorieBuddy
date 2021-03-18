@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <center><h1>Update!</h1></center> <br>
+
+        <p>You've successfully updated <%=numUpdate%> value(s) of <strong><%=name%></strong>.</p>
+	<p>Below you can see the news values of the food item.</p>
+
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item">Food item: <strong><%=name%></strong></li>
+                <li class="list-group-item">Values per: <strong><%=valueAmount%> <%=unit%></strong></li>
+                <li class="list-group-item">Calories: <strong><%=calories%> kcal</strong></li>
+                <li class="list-group-item">Carbs: <strong><%=carbs%> g</strong></li>
+                <li class="list-group-item">Sugars: <strong><%=sugars%> g</strong></li>
+                <li class="list-group-item">Fat: <strong><%=fat%> g</strong></li>
+                <li class="list-group-item">Protein: <strong><%=protein%> g</strong></li>
+                <li class="list-group-item">Salt: <strong><%=salt%> mg</strong></li>
+        </ul>
+
+    </div>
+</main>
+
+<footer>
+    <%- include('partials/footer'); %>
+</footer>
+
+</body>
+</html>

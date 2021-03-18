@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <% if(redirected){ %>
+ 	<center> <h1>Not so fast!</h1> </center>
+	<p>Before accessing this page you need to log in first.</p>
+	<% } else{ %>  
+	<center> <h1>Login</h1> </center>
+        <p>Welcome back! Use the following form to login.</p>   
+	<% } %>
+
+	<form method="POST" action="/loggedin">
+        
+    		<div class="form-group">
+        		<label for="username">Username</label>
+
+        		<div class="input-group">
+        		<div class="input-group-prepend">
+            			<span class="input-group-text" id="inputGroupPrepend">@</span>
+        		</div>
+        		<input type="text" class="form-control <% if(err == "username") { %> <%= "is-invalid" %> <% } %>" id="username" name="username" placeholder="Enter your username" aria-describedby="inputGroupPrepend" required>
+			<div class="invalid-feedback">Wrong username.</div>
+        		</div>
+    		</div>
+        
+    		<div class="form-group">
+        		<label for="password">Password</label>
+        		<input type="password" class="form-control <% if(err == "password") { %> <%= "is-invalid" %> <% } %>" id="password" name="password" placeholder="Enter your password">
+			<div class="invalid-feedback">Oops! Wrong password.</div>
+    		</div>
+
+
+    		<button type="submit" class="btn btn-primary">Submit</button>
+    	</form>
+	
+    </div>
+</main>
+
+<footer>
+    <%- include('partials/footer'); %>
+</footer>
+
+</body>
+</html>

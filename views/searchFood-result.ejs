@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <center> <h1>Your search result</h1> </center> <br>
+
+	<% if(foods.length == 0){ %>
+		<h5>Too bad!</h5>
+		<p>Your search didn't yield any results. The item you searched for is not in our database yet. You're more than welcome to add it on the <a href="/addFood" class="text-info">Add Food</a> page.</p>
+	<% } else{ %>  
+
+        	<p>Here are the items we found.</p>
+		
+		<div class="container">
+  		<div class="row row-cols-2">
+		<% foods.forEach(function(food){ %>
+		<div class="col">
+			<ul class="list-group">
+				<li class="list-group-item"> <strong><%=food.name%></strong></li>
+				<li class="list-group-item">Values per: <%=food.valueAmount%> <%=food.unit%></li>
+				<li class="list-group-item">Calories: <%=food.calories%> kcal</li>
+                		<li class="list-group-item">Carbs: <%=food.carbs%> g</li>
+		                <li class="list-group-item">Sugars: <%=food.sugars%> g</li>
+		                <li class="list-group-item">Fat: <%=food.fat%> g</li>
+                		<li class="list-group-item">Protein: <%=food.protein%> g</li>
+		                <li class="list-group-item">Salt: <%=food.salt%> mg</li>
+			</ul>
+			<br>
+		</div>
+
+             	<% }) %>
+		</div>
+		</div>
+
+	<% } %>
+
+    </div>
+</main>
+
+<footer>
+    <%- include('partials/footer'); %>
+</footer>
+
+</body>
+</html>

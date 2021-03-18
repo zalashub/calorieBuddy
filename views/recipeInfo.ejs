@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <center> <h1>Your recipe</h1> </center> <br>
+
+                <p>Based on the values you entered, here is the nutritional information about your meal / recipe.</p>
+
+                <div class="container">
+                <div class="row row-cols-2">
+                <div class="col">
+                        <ul class="list-group">
+                                <li class="list-group-item">Calories: <%=calories%> kcal</li>
+                                <li class="list-group-item">Carbs: <%=carbs%> g</li>
+                                <li class="list-group-item">Sugars: <%=sugars%> g</li>
+                                <li class="list-group-item">Fat: <%=fat%> g</li>
+                                <li class="list-group-item">Protein: <%=protein%> g</li>
+                                <li class="list-group-item">Salt: <%=salt%> mg</li>
+			</ul>
+                        <br>
+                </div>
+
+                </div>
+                </div>
+
+    </div>
+</main>
+
+<footer>
+    <%- include('partials/footer'); %>
+</footer>
+
+</body>
+</html>
+

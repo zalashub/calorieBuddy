@@ -1,0 +1,26 @@
+<-- https://www.digitalocean.com/community/tutorials/how-to-use-ejs-to-template-your-node-application -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+	<div><img src="/assets/foodHero.jpg" alt="Photo of food" max-width="800px"></div>
+        <h1>Hey there!</h1>
+        <p>Welcome to your Calorie Buddy</p>
+    </div>
+</main>
+
+<footer>
+    <%- include('partials/footer'); %>
+</footer>
+
+</body>
+</html>
