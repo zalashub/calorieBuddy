@@ -13,9 +13,10 @@
     <div class="jumbotron">
         <center> <h1>All Food Items</h1> </center> <br>
 
-                <p>Here you can see all of the food items with their nutritional information in our database.</p>
+        <p>Here you can see all of the food items with their nutritional information in our database.</p>
 		<p>By selecting various items and entering a value for their amount, you can calculate the nutritional information for a desired recipe or meal. <strong>Give it a try!</strong></p>
 		<p class="text-info">Note: Make sure the checkbox next to the item you wish to use in your recipe is checked, otherwise that item will be omitted!<p>
+		<!-- The form that will be sent and includes all the checkboxes and inputs for all the foods -->
 		<form method="GET" action="/calculateRecipe" id="calculateRecipeForm"></form>
 		<div class="table-responsive-sm">	
 		<table class="table table-striped table-hover table-md">
@@ -33,6 +34,7 @@
     			</tr>
   			</thead>
 			<tbody>
+			<!-- Generate a table row for each food, setting the columns to show the values of the food's properties -->
 			<% foods.forEach(function(food, i){ %>
 			<tr>
 				<th scope="row"><%=food.name%></th>
@@ -44,16 +46,20 @@
 				<td><%=food.protein%> g</td>
 				<td><%=food.salt%> mg</td>
 				<td>
+					<!-- Generate a checkbox and an input field for the form for each food item  -->
 					<div class="input-group input-group-sm">
   					<div class="input-group-prepend">
 						<div class="input-group-text">
+							<!-- Add the name and id of the checkbox to include the index of the food so it can then be differnetirated from the others  -->
       						<input form="calculateRecipeForm" id="checkbox<%=i%>" name="checkbox<%=i%>" type="checkbox" aria-label="Checkbox for following text input">
     						</div>
  	 				</div>
 					<input form="calculateRecipeForm" type="number" class="form-control" aria-label="Food amount" id="calcAmount<%=i%>" name="calcAmount<%=i%>" placeholder="e.g. 100.00" min="0.00" max="200.0" step="0.01">
-  					<div class="input-group-append">
+  					<!-- Add a appendix showing the typical unit of the food -->
+					<div class="input-group-append">
     						<span class="input-group-text"><%=food.unit%></span>
   					</div>
+					<!-- Include the ID of the food with the form (but hidden) so the correct document can be updated if the name of the food is being updated -->
 					<input form="calculateRecipeForm" type="hidden" class="form-control" id="foodName<%=i%>" name="foodName<%=i%>" value="<%=food.name%>" readonly>
 					</div>
 				</td>
@@ -62,7 +68,7 @@
 			</tbody>
 		</table>
 		</div>
-
+		<!-- The button to send all of the data -->
 		<button form="calculateRecipeForm" type="submit" class="btn btn-primary float-right">Calculate Recipe</button>
     </div>
 </main>

@@ -12,7 +12,7 @@
 <main>
     <div class="jumbotron">
         <center> <h1>Register</h1> </center>
-	<p>Use form below to register with Calorie Buddy.</p>
+		<p>Use form below to register with Calorie Buddy.</p>
 	
 	<form method="POST" action="/registered">
 
@@ -21,13 +21,13 @@
     	<div class="form-group col-md-6">
       		<label for="first">First Name</label>
       		<input type="text" class="form-control <% if(err.includes("first")) { %> <%= "is-invalid" %> <% } %>" id="first" name="first" placeholder="Enter your name" required>
-		<div class="invalid-feedback">First name can include only letters from the English alphabet.</div>
+			<div class="invalid-feedback">First name can include only letters from the English alphabet.</div>
     	</div>
      
     	<div class="form-group col-md-6">
       		<label for="last">Last Name</label>
       		<input type="text" class="form-control <% if(err.includes("last")) { %> <%= "is-invalid" %> <% } %>" id="last" name="last" placeholder="Enter your last name" required>
-		<div class="invalid-feedback">Last name can include only letters from the English alphabet.</div>
+			<div class="invalid-feedback">Last name can include only letters from the English alphabet.</div>
     	</div>
 
 	</div>
@@ -37,7 +37,7 @@
     	<div class="form-group col-md-12">
       		<label for="email">Email address</label>
       		<input type="email" class="form-control <% if(err.includes("email_taken")) { %> <%= "is-invalid" %> <% } %>" id="email" name="email"  aria-describedby="emailHelp" placeholder="name@example.com" required>
-		<div class="invalid-feedback">Oops! A user has already registered this email with us.</div>
+			<div class="invalid-feedback">Oops! A user has already registered this email with us.</div>
       		<small id="emailHelp" class="form-text text-muted">Your email will never be shared with third-party providers without your consent.</small>
     	</div>
 
@@ -53,8 +53,7 @@
          		 <span class="input-group-text" id="inputGroupPrepend">@</span>
         	</div>
         	<input type="text" class="form-control <% if(err.includes("username_taken") || err.includes("username")) { %> <%= "is-invalid" %> <% } %>" id="username" name="username" placeholder="Enter your username" aria-describedby="inputGroupPrepend usernameHelp" required>
-		
-		<% if(err.includes("username_taken")) { %> <div class="invalid-feedback"> Oops! This username is already taken. </div> <% } else { %> <div class="invalid-feedback"> Username is not long enough. </div> <% } %>
+			<% if(err.includes("username_taken")) { %> <div class="invalid-feedback"> Oops! This username is already taken. </div> <% } else { %> <div class="invalid-feedback"> Username is not long enough. </div> <% } %>
 
 		</div>
 		<small id="usernameHelp" class="form-text text-muted">Must be at least 5 characters long.</small>
@@ -63,7 +62,7 @@
     	<div class="form-group col-md-6">
      		<label for="password">Password</label>
       		<input type="password" class="form-control <% if(err.includes("password")) { %> <%= "is-invalid" %> <% } %>" id="password" name="password" aria-describedby="passwordHelp" placeholder="Enter your password" required>
-		<div class="invalid-feedback">Password is not long enough.</div>
+			<div class="invalid-feedback">Password is not long enough.</div>
       		<small id="passwordHelp" class="text-muted">Must be at least 8 characters long.</small>
     	</div>
 

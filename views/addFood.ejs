@@ -20,6 +20,7 @@
         
 	<div class="form-group col-md-5">
                 <label for="name">Title</label>
+                <!-- Show the invalid feedback if the error refers to the food already being in the database -->
                 <input type="text" class="form-control <% if(err == 'foodExists') { %> <%= "is-invalid" %> <% } %>" id="name" name="name" placeholder="e.g. Banana" required>
 		<div class="invalid-feedback">The food item with this name is already in our database.</div>
         </div>
