@@ -132,7 +132,7 @@ The relationship between the `food` collection and the `users` collection is thu
 
 The visual representation aka the Entity Relationship diagram can be seen below.
 
-\ ![Calorie Buddy Entity Relationship diagram](/calorie-buddy-erd.jpg "Entity Relationship diagram")
+![Calorie Buddy Entity Relationship diagram](/calorie-buddy-erd.png "Entity Relationship diagram")
 
 ---
 
