@@ -124,7 +124,7 @@ The Calorie Buddy dynamic web application uses **MongoDB** to store and perform 
 
 The name of the database is `calorieBuddy` with the two collections being `users` and `food`. 
 
-The `users` collection stores all the data about the registered users, such as first name, last name, email, username and a hashed password, and of course the **primary key** `_id` generated automatically by MongoDB.
+The `users` collection stores all the data about the registered users, such as first `"name"`, `"lastName"`, `"email"`, `"username"` and a hashed `"password"`, and of course the **primary key** `_id` generated automatically by MongoDB.
 
 The `food` collection stores all the food items that were added to the database. It includes the following fields: **primary key** `_id`, `"name"`, `"valueAmount"` for the typical amount of the food (e.g. 100 \[grams\]), `"unit"` for the unit of the typical values (gram, miligram, tablespoon, liter, etc.), `"calories"`, `"carbs"`, `"sugars"`, `"fat"`, `"protein"`, `"salt"` and `"creator"` to store the username of the user who added the partial food in the database. The `"creator"` field is thus a **foreign key** and a **reference** to the `"username"` field in the `users` collection.
 
